@@ -13,7 +13,7 @@ const pokemons = [
   { id: 150, name: "뮤츠", image: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" },
   { id: 151, name: "뮤", image: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png" },
   { id: 152, name: "치코리타", image: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/152.png" },
-]
+]//list 에 추가를 했는데 detail안했어 같은 이런 코딩은 하면 x (커지면커질수록 힘듦)
 
 export default function Detail({ params }: Route.ComponentProps) {
   const pokemon = pokemons.find(p => p.id === Number(params.id))

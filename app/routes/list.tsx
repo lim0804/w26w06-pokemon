@@ -1,4 +1,5 @@
-import type { Route } from "./+types/list"
+import type { Route } from "./+types/list" //인자로 들어갈건데 자동으로 타입을 관리
+//실행시 에러 vs 컴파일 에러
 import { Link } from "react-router"
 
  const pokemons = [
@@ -29,7 +30,8 @@ export default function List() {
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
         {pokemons.map((pokemon) => (
           <Link 
-            to={`detail/${pokemon.id}`}
+            to={`detail/${pokemon.id}`}// 따옴표가 아니라 backtick (')을 사용
+            //python fstring과 동일
             className="bg-white rounded-xl shadow hover:shadow-md transition
                       p-4 flex flex-col items-center gap-2
                       border border-slate-200 hover:border-yellow-400"
